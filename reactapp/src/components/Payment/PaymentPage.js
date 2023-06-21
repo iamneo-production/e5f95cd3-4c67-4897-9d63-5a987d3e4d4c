@@ -5,6 +5,7 @@ import cdcardlogo from './logos/cdcard-logo.png';
 import upilogo from './logos/upi-logo.png';
 import cashlogo from './logos/cash-logo.png';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 
 function PaymentPage () {
@@ -69,6 +70,21 @@ function PaymentPage () {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    
+    const paymentData = {
+      paymentMode,
+      cardNumber,
+      cardName,
+      expirationDate,
+      cvv,
+    };
+
+    try {
+      const response = await axios.post('/api/payments', paymentData);
+      console.log(response.data); // Optional: Handle response from the server
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
