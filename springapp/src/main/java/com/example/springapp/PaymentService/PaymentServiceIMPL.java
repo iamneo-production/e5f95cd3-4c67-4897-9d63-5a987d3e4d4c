@@ -21,10 +21,12 @@ public class PaymentServiceIMPL implements PaymentService
     {
         Payment payment = new Payment(
 
+                paymentSaveDTO.getPaymentMode(),
                 paymentSaveDTO.getCardname(),
                 paymentSaveDTO.getCardnumber(),
                 paymentSaveDTO.getExpirationDate(),
-                paymentSaveDTO.getCvv()
+                paymentSaveDTO.getCVV(),
+                paymentSaveDTO.getUPI()
         );
         paymentRepo.save(payment);
         return payment.getCardname();

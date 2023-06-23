@@ -4,17 +4,21 @@ public class PaymentSaveDTO {
 
 
     private int paymentid;
+    private String paymentmode;
     private String cardname;
     private String cardnumber;
-    private String expirationDate;
+    private String expirationdate;
     private int cvv;
+    private String upi;
 
-    public PaymentSaveDTO(int paymentid, String cardname, String cardnumber, String expirationDate, int cvv) {
+    public PaymentSaveDTO(int paymentid, String paymentmode, String cardname, String cardnumber, String expirationdate, int cvv, String upi) {
         this.paymentid = paymentid;
+        this.paymentmode = paymentmode;
         this.cardname = cardname;
         this.cardnumber = cardnumber;
-        this.expirationDate = expirationDate;
+        this.expirationdate = expirationdate;
         this.cvv = cvv;
+        this.upi = upi;
     }
 
     public PaymentSaveDTO() {
@@ -26,6 +30,14 @@ public class PaymentSaveDTO {
 
     public void setPaymentid(int paymentid) {
         this.paymentid = paymentid;
+    }
+
+    public String getPaymentMode() {
+        return paymentmode;
+    }
+
+    public void setPaymentMode(String paymentmode) {
+        this.paymentmode = paymentmode;
     }
 
     public String getCardname() {
@@ -45,29 +57,39 @@ public class PaymentSaveDTO {
     }
 
     public String getExpirationDate() {
-        return expirationDate;
+        return expirationdate;
     }
 
-    public void setExpirationDate(String expirationDate) {
-        this.expirationDate = expirationDate;
+    public void setExpirationDate(String expirationdate) {
+        this.expirationdate = expirationdate;
     }
 
-    public int getCvv() {
+    public int getCVV() {
       return cvv;
     }
 
-    public void setCvv(int cvv) {
+    public void setCVV(int cvv) {
       this.cvv = cvv;
     }
+
+    public String getUPI() {
+        return upi;
+     }
+   
+     public void setUPI(String upi) {
+        this.upi = upi;
+     }
 
     @Override
     public String toString() {
         return "PaymentSaveDTO{" +
                 "paymentid=" + paymentid +
+                ", paymentmode='" + paymentmode + '\'' +
                 ", cardname='" + cardname + '\'' +
                 ", cardnumber='" + cardnumber + '\'' +
-                ", expirationDate='" + expirationDate + '\'' +
-                ", cvv='" + cvv +
+                ", expirationdate='" + expirationdate + '\'' +
+                ", cvv='" + cvv + '\'' +
+                ", upi='" + upi +
                 '}';
     }
 }

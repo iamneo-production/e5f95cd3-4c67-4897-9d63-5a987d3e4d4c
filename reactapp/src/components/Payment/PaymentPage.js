@@ -8,24 +8,24 @@ import { useNavigate } from 'react-router-dom';
 
 
 function PaymentPage () {
-  const [paymentMode, setPaymentMode] = useState('Credit/Debit Card');
-  const [cardNumber, setCardNumber] = useState('');
-  const [cardName, setCardName] = useState('');
-  const [expirationDate, setExpirationDate] = useState('');
+  const [paymentmode, setPaymentMode] = useState('Credit/Debit Card');
+  const [cardnumber, setCardnumber] = useState('');
+  const [cardname, setCardname] = useState('');
+  const [expirationdate, setExpirationDate] = useState('');
   const [cvv, setCVV] = useState('');
   const [upi, setUPI] = useState('');
 
   const navigate = useNavigate();
 
   const handleTicket = () => {
-    navigate('/ticket', {state : {paymentMode:paymentMode, cardName:cardName}})
+    navigate('/ticket', {state : {paymentmode:paymentmode, cardname:cardname}})
   };
 
   const handlePaymentModeChange = (event) => {
     setPaymentMode(event.target.value);
   };
 
-  const handleCardNumberChange = (event) => {
+  const handleCardnumberChange = (event) => {
     const input = event.target.value;
     let formattedInput = input;
 
@@ -37,7 +37,7 @@ function PaymentPage () {
       formattedInput = formattedInput.replace(/\d{4}(?=.)/g, '$& ');
     }
 
-    setCardNumber(formattedInput);
+    setCardnumber(formattedInput);
   };
 
   const handleExpirationDateChange = (event) => {
@@ -55,8 +55,8 @@ function PaymentPage () {
     setExpirationDate(formattedInput);
   };
 
-  const handleCardNameChange = (event) => {
-    setCardName(event.target.value);
+  const handleCardnameChange = (event) => {
+    setCardname(event.target.value);
   };
 
   const handleCVVChange = (event) => {
@@ -70,11 +70,11 @@ function PaymentPage () {
   const handleSubmit = async (event) => {
     event.preventDefault();
     
-    const paymentData = {
-      paymentMode,
-      cardNumber,
-      cardName,
-      expirationDate,
+    let paymentData = {
+      paymentmode,
+      cardnumber,
+      cardname,
+      expirationdate,
       cvv,
       upi,
     };
@@ -90,14 +90,6 @@ function PaymentPage () {
       .then(data => {
         console.log('Payment data stored successfully:', data);
         // Reset the form after successful submission
-        setPaymentData({
-          paymentMode: '',
-          cardNumber: '',
-          cardName: '',
-          expirationDate: '',
-          cvv: '',
-          upi: ''
-        });
       })
       .catch(error => {
         console.error('Error storing payment data:', error);
@@ -116,7 +108,7 @@ function PaymentPage () {
             type="radio"
             name="selectedOption"
             value="Credit/Debit Card"
-            checked={paymentMode === 'Credit/Debit Card'}
+            checked={paymentmode === 'Credit/Debit Card'}
             onChange={handlePaymentModeChange}
           />
           <b>Credit/Debit Card</b>
@@ -126,7 +118,7 @@ function PaymentPage () {
             type="radio"
             name="selectedOption"
             value="PayPal"
-            checked={paymentMode === 'PayPal'}
+            checked={paymentmode === 'PayPal'}
             onChange={handlePaymentModeChange}
           />
           <b>PayPal</b>
@@ -136,7 +128,7 @@ function PaymentPage () {
             type="radio"
             name="selectedOption"
             value="UPI"
-            checked={paymentMode === 'UPI'}
+            checked={paymentmode === 'UPI'}
             onChange={handlePaymentModeChange}
           />
           <b>UPI</b>
@@ -144,39 +136,39 @@ function PaymentPage () {
         <label>
           <input
             type="radio"
-            name="paymentMode"
+            name="paymentmode"
             value="Cash"
-            checked={paymentMode === 'Cash'}
+            checked={paymentmode === 'Cash'}
             onChange={handlePaymentModeChange}
           />
           <b>Cash</b>
         </label>
       </div>
-      {paymentMode && (
+      {paymentmode && (
         <form className="card-details-form" onSubmit={handleSubmit}>
           <div className="card-logo">
-            {paymentMode === 'Credit/Debit Card' && (
+            {paymentmode === 'Credit/Debit Card' && (
               <img src={cdcardlogo} alt="Credit/Debit Card Logo" />
             )}
-            {paymentMode=== 'PayPal' && (
+            {paymentmode=== 'PayPal' && (
               <img src={paypallogo} alt="PayPal Logo" />
             )}
-            {paymentMode === 'UPI' && (
+            {paymentmode === 'UPI' && (
               <img src={upilogo} alt="UPI Logo" />
             )}
-            {paymentMode === 'Cash' && (
+            {paymentmode === 'Cash' && (
               <img src={cashlogo} alt="Cash Logo" />
             )}
           </div>
-          {paymentMode === 'Credit/Debit Card' && (
+          {paymentmode === 'Credit/Debit Card' && (
           <div className="card-details">
             <label>
               <b>Card Number:</b>
               <input
                 type="text"
                 placeholder='1234 XXXX XXXX 7890'
-                value={paymentData.cardNumber}
-                onChange={handleCardNumberChange}
+                value={cardnumber}
+                onChange={handleCardnumberChange}
               />
             </label>
             <label>
@@ -184,18 +176,18 @@ function PaymentPage () {
               <input
                 type="text"
                 placeholder='Peter Parker'
-                value={paymentData.cardName}
-                onChange={handleCardNameChange}
+                value={cardname}
+                onChange={handleCardnameChange}
               />
             </label>
             <div className="expcvv-input-container">
-            <div className="expirationDate-input-container">
+            <div className="expirationdate-input-container">
             <label>
-              <b>expirationDate:</b>
+              <b>expirationdate:</b>
               <input
                 type="text"
                 placeholder='07/25'
-                value={paymentData.expirationDate}
+                value={expirationdate}
                 onChange={handleExpirationDateChange}
                 style={{ width: '40px', fontSize: '14px' }}
               />
@@ -207,7 +199,7 @@ function PaymentPage () {
               <input
                 type="numbers"
                 placeholder='007'
-                value={paymentData.cvv}
+                value={cvv}
                 onChange={handleCVVChange}
                 style={{ width: '40px', fontSize: '14px' }}
                 maxLength="4"
@@ -216,15 +208,15 @@ function PaymentPage () {
             </div>
           </div>
           </div>)}
-          {paymentMode === 'PayPal' && (
+          {paymentmode === 'PayPal' && (
           <div className="card-details">
             <label>
               <b>Paypal Email:</b>
               <input
                 type="text"
                 placeholder='Email Address'
-                value={paymentData.cardNumber}
-                onChange={handleCardNumberChange}
+                value={cardnumber}
+                onChange={handleCardnumberChange}
               />
             </label>
             <label>
@@ -232,19 +224,19 @@ function PaymentPage () {
               <input
                 type="password"
                 placeholder='Password'
-                value={paymentData.expirationDate}
+                value={expirationdate}
                 onChange={handleExpirationDateChange}
               />
             </label>
             </div>)}
-            {paymentMode === 'UPI' && (
+            {paymentmode === 'UPI' && (
           <div className="card-details">
             <label>
               <b>UPI Id:</b>
               <input
                 type="text"
                 placeholder='123456789@ybl'
-                value={paymentData.upi}
+                value={upi}
                 onChange={handleUPIChange}
               />
             </label>

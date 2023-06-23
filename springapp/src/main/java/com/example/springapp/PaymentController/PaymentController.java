@@ -8,12 +8,12 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("api/payments")
+@RequestMapping("/api/payments")
 public class PaymentController
 {
     @Autowired
     private PaymentService paymentService;
-    @PostMapping(path = "/ticket")
+    @PostMapping(path = "/save")
     public String savePayment(@RequestBody PaymentSaveDTO paymentSaveDTO)
     {
         String id = paymentService.addPayment(paymentSaveDTO);

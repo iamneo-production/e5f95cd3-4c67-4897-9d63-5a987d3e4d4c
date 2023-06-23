@@ -1,8 +1,8 @@
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/PaymentApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/PaymentService/PaymentService.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/entity/PaymentData.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/entity/Payment.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/PaymentService/PaymentServiceIMPL.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/DTO/PaymentDTO.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/DTO/PaymentSaveDTO.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/PaymentController/PaymentController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/PaymentController/PaymentRepo.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/Application.java

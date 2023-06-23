@@ -9,6 +9,9 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int paymentid;
 
+    @Column(name = "payment_mode", length =20)
+    private String paymentmode;
+
     @Column(name = "card_name", length = 20)
     private String cardname;
 
@@ -16,27 +19,34 @@ public class Payment {
     private String cardnumber;
 
     @Column(name = "expiry", length = 5)
-    private String expirationDate;
+    private String expirationdate;
 
     @Column(name = "cvv", length = 3)
     private int cvv;
 
-    public Payment(int paymentid, String cardname, String cardnumber, String expirationDate, int cvv) {
+    @Column(name = "upi", length = 20)
+    private String upi;
+
+    public Payment(int paymentid, String paymentmode, String cardname, String cardnumber, String expirationdate, int cvv, String upi) {
         this.paymentid = paymentid;
+        this.paymentmode = paymentmode;
         this.cardname = cardname;
         this.cardnumber = cardnumber;
-        this.expirationDate = expirationDate;
+        this.expirationdate = expirationdate;
         this.cvv = cvv;
+        this.upi = upi;
     }
 
     public Payment() {
     }
 
-    public Payment(String cardname, String cardnumber, String expirationDate, int cvv) {
+    public Payment(String cardname, String paymentmode, String cardnumber, String expirationdate, int cvv, String upi) {
+        this.paymentmode = paymentmode;
         this.cardname = cardname;
         this.cardnumber = cardnumber;
-        this.expirationDate = expirationDate;
+        this.expirationdate = expirationdate;
         this.cvv = cvv;
+        this.upi = upi;
     }
 
     public int getPaymentid() {
@@ -45,6 +55,14 @@ public class Payment {
 
     public void setPaymentid(int paymentid) {
         this.paymentid = paymentid;
+    }
+
+    public String getPaymentMode() {
+        return paymentmode;
+    }
+
+    public void setPaymentMode(String paymentmode) {
+        this.paymentmode = paymentmode;
     }
 
     public String getCardname() {
@@ -64,29 +82,39 @@ public class Payment {
     }
 
     public String getExpirationDate() {
-        return expirationDate;
+        return expirationdate;
     }
 
-    public void setExpirationDate(String expirationDate) {
-        this.expirationDate = expirationDate;
+    public void setExpirationDate(String expirationdate) {
+        this.expirationdate = expirationdate;
     }
 
-    public int getCvv() {
+    public int getCVV() {
       return cvv;
     }
 
-    public void setCvv(int cvv) {
+    public void setCVV(int cvv) {
       this.cvv = cvv;
     }
+
+    public String getUPI() {
+        return upi;
+     }
+   
+     public void setUPI(String upi) {
+        this.upi = upi;
+     }
 
     @Override
     public String toString() {
         return "Payment{" +
                 "paymentid=" + paymentid +
+                ", paymentmode='" + paymentmode + '\'' +
                 ", cardname='" + cardname + '\'' +
                 ", cardnumber='" + cardnumber + '\'' +
-                ", expirationDate='" + expirationDate + '\'' +
-                ", cvv='" + cvv +
+                ", expirationdate='" + expirationdate + '\'' +
+                ", cvv='" + cvv + '\'' +
+                ", upi='" + upi +
                 '}';
     }
 }
