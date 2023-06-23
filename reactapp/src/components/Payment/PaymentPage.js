@@ -5,7 +5,6 @@ import cdcardlogo from './logos/cdcard-logo.png';
 import upilogo from './logos/upi-logo.png';
 import cashlogo from './logos/cash-logo.png';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 
 
 function PaymentPage () {
@@ -77,14 +76,32 @@ function PaymentPage () {
       cardName,
       expirationDate,
       cvv,
+      upi,
     };
 
-    try {
-      const response = await axios.post('/api/payments', paymentData);
-      console.log(response.data); // Optional: Handle response from the server
-    } catch (error) {
-      console.error(error);
-    }
+    fetch('/api/payments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(paymentData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Payment data stored successfully:', data);
+        // Reset the form after successful submission
+        setPaymentData({
+          paymentMode: '',
+          cardNumber: '',
+          cardName: '',
+          expirationDate: '',
+          cvv: '',
+          upi: ''
+        });
+      })
+      .catch(error => {
+        console.error('Error storing payment data:', error);
+      });
   };
 
   return (
@@ -158,7 +175,7 @@ function PaymentPage () {
               <input
                 type="text"
                 placeholder='1234 XXXX XXXX 7890'
-                value={cardNumber}
+                value={paymentData.cardNumber}
                 onChange={handleCardNumberChange}
               />
             </label>
@@ -167,18 +184,18 @@ function PaymentPage () {
               <input
                 type="text"
                 placeholder='Peter Parker'
-                value={cardName}
+                value={paymentData.cardName}
                 onChange={handleCardNameChange}
               />
             </label>
             <div className="expcvv-input-container">
-            <div className="expiry-input-container">
+            <div className="expirationDate-input-container">
             <label>
-              <b>Expiry:</b>
+              <b>expirationDate:</b>
               <input
                 type="text"
                 placeholder='07/25'
-                value={expirationDate}
+                value={paymentData.expirationDate}
                 onChange={handleExpirationDateChange}
                 style={{ width: '40px', fontSize: '14px' }}
               />
@@ -190,7 +207,7 @@ function PaymentPage () {
               <input
                 type="numbers"
                 placeholder='007'
-                value={cvv}
+                value={paymentData.cvv}
                 onChange={handleCVVChange}
                 style={{ width: '40px', fontSize: '14px' }}
                 maxLength="4"
@@ -206,7 +223,7 @@ function PaymentPage () {
               <input
                 type="text"
                 placeholder='Email Address'
-                value={cardNumber}
+                value={paymentData.cardNumber}
                 onChange={handleCardNumberChange}
               />
             </label>
@@ -215,7 +232,7 @@ function PaymentPage () {
               <input
                 type="password"
                 placeholder='Password'
-                value={expirationDate}
+                value={paymentData.expirationDate}
                 onChange={handleExpirationDateChange}
               />
             </label>
@@ -227,7 +244,7 @@ function PaymentPage () {
               <input
                 type="text"
                 placeholder='123456789@ybl'
-                value={upi}
+                value={paymentData.upi}
                 onChange={handleUPIChange}
               />
             </label>
