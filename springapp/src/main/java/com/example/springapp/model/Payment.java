@@ -13,6 +13,8 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "payment_id")
     private int id;
+    @Column(name = "payment_mode")
+    private String paymentMode;
     @Column(name = "card_number")
     private String cardNumber;
     @Column(name = "card_name")
@@ -23,8 +25,6 @@ public class Payment {
     private int cvv;
     @Column(name = "upi")
     private String upi;
-    @Column(name = "payment_mode")
-    private String paymentMode;
 
     public Payment() {
     }
