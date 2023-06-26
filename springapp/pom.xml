@@ -5,7 +5,11 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>2.7.14-SNAPSHOT</version>
+=======
+		<version>2.7.12</version>
+>>>>>>> Project-Workspace-shantha7kumar
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
@@ -60,6 +64,7 @@
 			</plugin>
 		</plugins>
 	</build>
+<<<<<<< HEAD
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
@@ -96,5 +101,7 @@
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
+=======
+>>>>>>> Project-Workspace-shantha7kumar
 
 </project>
