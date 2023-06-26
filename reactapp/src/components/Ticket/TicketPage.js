@@ -39,12 +39,12 @@ export default function TicketPage (props) {
             <span className="ticket-value">{}</span>
           </div>
           <div className="ticket-field">
-            <span className="ticket-label">Payee Name:</span>
-            <span className="ticket-value">{location.state.cardName}</span>
+            <span className="ticket-label">Payment ID:</span>
+            <span className="ticket-value">{}</span>
           </div>
           <div className="ticket-field">
             <span className="ticket-label">Payment Mode:</span>
-            <span className="ticket-value">{location.state.paymentmode}</span>
+            <span className="ticket-value">{}</span>
           </div>
         </div>
         <button onclick={handlehome} style={{display: 'block', marginRight: 'auto', marginLeft: 'auto', bottom: '0px'}}>

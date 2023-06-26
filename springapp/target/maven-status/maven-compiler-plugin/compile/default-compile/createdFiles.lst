@@ -1,8 +1,6 @@
-com/example/springapp/entity/Payment.class
-com/example/springapp/DTO/PaymentDTO.class
-com/example/springapp/DTO/PaymentSaveDTO.class
-com/example/springapp/Application.class
-com/example/springapp/PaymentRepo/PaymentRepo.class
-com/example/springapp/Service/PaymentServiceIMPL.class
-com/example/springapp/PaymentController/PaymentController.class
-com/example/springapp/Service/PaymentService.class
+com/example/springapp/SpringappApplication.class
+com/example/springapp/controller/PaymentController.class
+com/example/springapp/model/Payment.class
+com/example/springapp/service/PaymentService.class
+com/example/springapp/service/PaymentServiceImpl.class
+com/example/springapp/repository/PaymentRepository.class
