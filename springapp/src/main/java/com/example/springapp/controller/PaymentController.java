@@ -17,7 +17,7 @@ public class PaymentController {
     @PostMapping("/save")
     public String save(@RequestBody Payment payment){
         paymentService.savePayment(payment);
-        return "New payment is added";
+        return "New student is added";
     }
 
     @GetMapping("/getAll")

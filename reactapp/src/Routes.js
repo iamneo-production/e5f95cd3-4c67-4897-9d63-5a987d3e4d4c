@@ -5,9 +5,7 @@ import TicketPage from "./components/TicketPage";
 
  const Routes = () => (
     <Routes>
-        <Route 
-            exact path='/' component={PaymentPage}
-        />
+        <Route exact path='/' component={PaymentPage}/>
         <Route component={TicketPage}/>
     </Routes>
  );
