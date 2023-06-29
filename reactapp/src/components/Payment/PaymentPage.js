@@ -7,11 +7,7 @@ import cashlogo from './logos/cash-logo.png';
 import { useNavigate } from 'react-router-dom';
 
 
-<<<<<<< HEAD
 function PaymentPage () {
-=======
-function PaymentPage ({payment}) {
->>>>>>> 465dbd60d2c9045a58b26d9bc1b8eac19eaca3ff
   const [paymentMode, setPaymentMode] = useState('Credit/Debit Card');
   const [cardNumber, setCardNumber] = useState('');
   const [cardName, setCardName] = useState('');
