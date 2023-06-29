@@ -13,7 +13,8 @@ function PaymentPage () {
   const [expirationDate, setExpirationDate] = useState('');
   const [cvv, setCVV] = useState('');
   const [upi, setUPI] = useState('');
-  //const[payments, setPayments] = useState([]);
+  const[paypalEmail, setPaypalEmail] = useState();
+  const[paypalPassword, setPaypalPassword] = useState();
 
   const navigate = useNavigate();
 
@@ -63,6 +64,15 @@ function PaymentPage () {
     setCVV(event.target.value);
   };
 
+  const handlePaypalEmailChange = (event) => {
+    setPaypalEmail(event.target.value);
+  };
+
+  const handlePaypalPasswordChange = (event) => {
+    setPaypalPassword(event.target.value);
+  };
+
+
   const handleUPIChange = (event) => {
     setUPI(event.target.value);
   };
@@ -77,6 +87,8 @@ function PaymentPage () {
       expirationDate,
       cvv,
       upi,
+      paypalEmail,
+      paypalPassword,
     };
 
     console.log(payment)
@@ -197,8 +209,8 @@ function PaymentPage () {
               <input
                 type="text"
                 placeholder='Email Address'
-                value={cardNumber}
-                onChange={handleCardNumberChange}
+                value={paypalEmail}
+                onChange={handlePaypalEmailChange}
               />
             </label>
             <label>
@@ -206,8 +218,8 @@ function PaymentPage () {
               <input
                 type="password"
                 placeholder='Password'
-                value={expirationDate}
-                onChange={handleExpirationDateChange}
+                value={paypalPassword}
+                onChange={handlePaypalPasswordChange}
               />
             </label>
             </div>)}

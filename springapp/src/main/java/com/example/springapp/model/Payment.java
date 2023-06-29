@@ -7,13 +7,13 @@ import javax.persistence.Id;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "paymentsdb")
+@Table(name = "paymentdb")
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "payments_id")
+    @Column(name = "payment_id")
     private int id;
-    @Column(name = "payments_mode")
+    @Column(name = "payment_mode")
     private String paymentsMode;
     @Column(name = "card_number")
     private String cardNumber;
@@ -25,6 +25,12 @@ public class Payment {
     private int cvv;
     @Column(name = "upi")
     private String upi;
+    @Column(name = "paypal_email")
+    private String paypalEmail;
+    @Column(name = "paypal_password")
+    private String paypalPassword;
+
+
 
     public Payment() {
     }
@@ -35,6 +41,14 @@ public class Payment {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getPaymentMode() {
+        return paymentsMode;
+    }
+
+    public void setPaymentMode(String paymentsMode) {
+        this.paymentsMode = paymentsMode;
     }
 
     public String getCardNumber() {
@@ -77,11 +91,19 @@ public class Payment {
         this.upi = upi;
     }
 
-    public String getPaymentMode() {
-        return paymentsMode;
+    public String getPaypalEmail() {
+        return paypalEmail;
     }
 
-    public void setPaymentMode(String paymentsMode) {
-        this.paymentsMode = paymentsMode;
+    public void setPaypalEmail(String paypalEmail) {
+        this.paypalEmail = paypalEmail;
+    }
+
+    public String getPaypalPassword() {
+        return paypalPassword;
+    }
+
+    public void setPaypalPassword(String paypalPassword) {
+        this.paypalPassword = paypalPassword;
     }
 }
