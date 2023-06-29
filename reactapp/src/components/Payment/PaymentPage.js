@@ -3,7 +3,6 @@ import './PaymentPage.css';
 import paypallogo from './logos/paypal-logo.png';
 import cdcardlogo from './logos/cdcard-logo.png';
 import upilogo from './logos/upi-logo.png';
-import cashlogo from './logos/cash-logo.png';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -129,16 +128,6 @@ function PaymentPage () {
           />
           <b>UPI</b>
         </label>
-        <label>
-          <input
-            type="radio"
-            name="paymentMode"
-            value="Cash"
-            checked={paymentMode === 'Cash'}
-            onChange={handlePaymentModeChange}
-          />
-          <b>Cash</b>
-        </label>
       </div>
       {paymentMode && (
         <form className="card-details-form" onSubmit={handleSubmit}>
@@ -151,9 +140,6 @@ function PaymentPage () {
             )}
             {paymentMode === 'UPI' && (
               <img src={upilogo} alt="UPI Logo" />
-            )}
-            {paymentMode === 'Cash' && (
-              <img src={cashlogo} alt="Cash Logo" />
             )}
           </div>
           {paymentMode === 'Credit/Debit Card' && (
