@@ -80,7 +80,7 @@ function PaymentPage () {
     };
 
     console.log(payment)
-    fetch("http://localhost:8080/api/payment/save",{
+    fetch("http://localhost:8080/payments/save",{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify(payment)

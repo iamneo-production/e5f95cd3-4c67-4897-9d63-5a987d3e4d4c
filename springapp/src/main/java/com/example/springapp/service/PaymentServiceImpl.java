@@ -11,15 +11,15 @@ import java.util.List;
 public class PaymentServiceImpl implements PaymentService {
 
     @Autowired
-    private PaymentRepository paymentRepository;
+    private PaymentRepository paymentsRepository;
 
     @Override
-    public Payment savePayment(Payment payment) {
-        return paymentRepository.save(payment);
+    public Payment savePayment(Payment payments) {
+        return paymentsRepository.save(payments);
     }
 
     @Override
     public List<Payment> getAllPayments() {
-        return paymentRepository.findAll();
+        return paymentsRepository.findAll();
     }
 }

@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/payment")
+@RequestMapping("/payments")
 @CrossOrigin
 public class PaymentController {
     @Autowired
-    private PaymentService paymentService;
+    private PaymentService paymentsService;
 
     @PostMapping("/save")
-    public String save(@RequestBody Payment payment){
-        paymentService.savePayment(payment);
-        return "New student is added";
+    public String save(@RequestBody Payment payments){
+        paymentsService.savePayment(payments);
+        return "New Payment is added";
     }
 
     @GetMapping("/getAll")
     public List<Payment> list(){
-        return paymentService.getAllPayments();
+        return paymentsService.getAllPayments();
     }
 }

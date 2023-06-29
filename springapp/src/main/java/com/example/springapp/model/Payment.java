@@ -7,14 +7,14 @@ import javax.persistence.Id;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "paymentdb")
+@Table(name = "paymentsdb")
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "payment_id")
+    @Column(name = "payments_id")
     private int id;
-    @Column(name = "payment_mode")
-    private String paymentMode;
+    @Column(name = "payments_mode")
+    private String paymentsMode;
     @Column(name = "card_number")
     private String cardNumber;
     @Column(name = "card_name")
@@ -78,10 +78,10 @@ public class Payment {
     }
 
     public String getPaymentMode() {
-        return paymentMode;
+        return paymentsMode;
     }
 
-    public void setPaymentMode(String paymentMode) {
-        this.paymentMode = paymentMode;
+    public void setPaymentMode(String paymentsMode) {
+        this.paymentsMode = paymentsMode;
     }
 }
