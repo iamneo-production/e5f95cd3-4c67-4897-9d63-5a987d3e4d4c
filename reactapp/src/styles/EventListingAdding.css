@@ -1,0 +1,192 @@
+.event-search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .event-search-input {
+    width: 900px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .event-search-input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+  }
+  
+  .event-container{
+    position: relative;
+    background-image: url('https://img.freepik.com/free-vector/futuristic-dark-wavy-background_23-2148400222.jpg');
+    background-size: cover;
+    background-position: right ;
+    height:170vh;
+  }
+  
+  .event-card-container{
+    width:100vw;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    padding:40px 20px;
+   
+  }
+  
+  .event-card{
+    display:flex;
+    flex-direction:column;
+    width:400px;
+    height: auto;
+    margin-bottom:120px;
+  }
+  
+  .event-card>div{
+    box-shadow:0 15px 20px 0 rgba(0,0,0,0.5);
+  }
+  
+  .event-card-text{
+    margin:-30px 25px;
+    margin-bottom:-50px;
+    height:400px;
+    width:270px;
+    background-color:#1D1C20;
+    color:#fff;
+    padding:10px;
+  }
+  
+  .event-card-title{
+    font-size:2.2rem;
+    margin-bottom:20px;
+    margin-top:5px;
+    font-style:italic;
+  }
+  .event-card-body{
+    font-size:1.25rem;
+    color:rgb(251, 198, 218);
+    font-family: 'Dekko';
+    text-align: center;
+  }
+  .event-box{
+    width:250px;
+    height:150px;
+    border:4px solid rgb(179, 152, 170);
+  }
+  .event-card-price{
+    width:70px;
+    height:70px;
+    background-color:rgb(179, 152, 170);
+    color:#fff;
+    margin-left:280px;
+    font-size:1rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .event-btn{
+    background-color:transparent;
+    padding:10px 20px;
+    transition:all 0.3s ease;
+    border:none; 
+    font-size:18px;
+    border-radius:30px;
+    color:goldenrod;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+  
+  
+  .event-btn-default{
+    border:2px solid rgb(87, 43, 89);
+  }
+  
+  .event-btn-default:hover{
+    background-color:rgb(87, 43, 89);
+  }
+  .add-event{
+    text-align: center;
+    z-index:1;
+  }
+  a{
+    text-decoration: none;
+  }
+  .event-card-block {
+    border:2px solid rgb(87, 43, 89);
+  }
+  .event-card-block:hover{
+    background-color:rgb(87, 43, 89);
+  }
+  .event-block{
+    display: block;
+    width: 100%;
+   
+    background-color:transparent;
+    padding:10px 20px;
+    transition:all 0.3s ease;
+    border:none; 
+    font-size:18px;
+    border-radius:30px;
+    color:goldenrod;
+   
+    text-align: center;
+  }
+  
+  .event-form-card{
+    font-family:Bradley Hand, cursive ;
+          margin:  0;
+          width:   60%;
+          font-size: 2.5rem;
+          position: absolute;
+          top:  50%;
+          left: 50%;
+          text-align: center;
+          transform: translate(-50%, -50%);
+          background: rgba( 255, 255, 255, 0.25 );
+          box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+          backdrop-filter: blur( 4px );
+          -webkit-backdrop-filter: blur( 4px );
+          border-radius: 10px;
+          border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  .event-form-card-body{
+    font-size:1.5rem;
+    color:rgb(53, 3, 25);
+  }
+  .event-form-group{
+    margin:40px;
+    text-align:center;
+  }
+  .event-form-card-body input{
+    padding:6px;
+    width:300px;
+    border:4px solid rgb(221, 70, 103) ;
+    background-color: rgb(74, 34, 76);
+    color:whitesmoke;
+  }
+  
+  .event-img-section{
+      background: url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80");
+      min-height:900px; 
+      background-repeat: no-repeat;
+      width:100%;
+      height:100%;
+      background-position:bottom center;
+      background-size:cover;  
+      position: relative;
+  
+      
+  }
+  .event-img-section::before{
+     content:'';
+          position: absolute;
+          top:0;
+          left:0;
+          right:0;
+          bottom: 0;
+          background-image:linear-gradient(to bottom right , #000,#000);
+          opacity:0.6; 
+          
+  }
