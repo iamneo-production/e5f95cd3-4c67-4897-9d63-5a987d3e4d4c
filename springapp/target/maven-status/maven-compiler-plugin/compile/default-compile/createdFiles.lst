@@ -1,6 +1,0 @@
-com/example/springapp/SpringappApplication.class
-com/example/springapp/controller/PaymentController.class
-com/example/springapp/model/Payment.class
-com/example/springapp/service/PaymentService.class
-com/example/springapp/service/PaymentServiceImpl.class
-com/example/springapp/repository/PaymentRepository.class
