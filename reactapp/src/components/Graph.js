@@ -10,7 +10,7 @@ const Graph = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/event',{
+      .get('https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/event',{
         method: 'GET',
         headers:
          {
@@ -31,8 +31,8 @@ const Graph = () => {
     attendeesCount: event.attendees.length,
   }));
 
-  const eventNames = eventData.map((data) => data.eventName);
-  const attendeesCount = eventData.map((data) => data.attendeesCount);
+  const eventNames = eventData.map((data2) => data2.eventName);
+  const attendeesCount = eventData.map((data1) => data1.attendeesCount);
 
   const data = {
     labels: eventNames,

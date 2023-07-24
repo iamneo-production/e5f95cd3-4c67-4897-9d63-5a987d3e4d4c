@@ -30,7 +30,7 @@ const Signup = () => {
 
       try
       {
-        const response = await  fetch('http://localhost:8080/api/register',{
+        const response = await  fetch('https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/api/register',{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -40,7 +40,6 @@ const Signup = () => {
         if(response.ok)
         {
             const responseData = await response.json();
-           // console.log(responseData);
             console.log(responseData.userId);
             navigate('/login');
 

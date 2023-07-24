@@ -19,7 +19,7 @@ import com.example.springapp.model.Ticket;
 import com.example.springapp.service.TicketService;
 
 
-@CrossOrigin
+@CrossOrigin(origins = "https://8081-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io")
 @RestController
 @RequestMapping("/ticket")
 public class TicketsController 

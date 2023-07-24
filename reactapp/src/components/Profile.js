@@ -26,7 +26,7 @@ const Profile = () => {
       try {
         const userid = localStorage.getItem('userid');
         console.log(userid);
-        const response = await fetch(`http://localhost:8080/api/profile/${userid}`, {
+        const response = await fetch(`https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/api/profile/${userid}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
