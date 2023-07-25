@@ -17,7 +17,7 @@ import com.example.springapp.service.AuthService;
 
 
 
-@CrossOrigin
+@CrossOrigin(origins = "https://8081-ddccbfcbbfcbfcaaafaebabceaeaadbdbabf.project.examly.io")
 @RestController
 @RequestMapping("/api")
 public class ProfileController 

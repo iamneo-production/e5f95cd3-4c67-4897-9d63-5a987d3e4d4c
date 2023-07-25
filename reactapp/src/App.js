@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import PaymentPage from './components/Payment/PaymentPage';
-import { Routes, Route } from 'react-router-dom';
-import TicketPage from './components/Ticket/TicketPage';
-
-
-function App () {
-  return (
-    <div>
-      <Routes>
-        <Route path='/' element={<PaymentPage />} />
-        <Route path='/ticket' element={<TicketPage />} />
-      </Routes> 
-    </div>
-  )
-}
-=======
 import React, { useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
@@ -112,6 +94,5 @@ const App = () => {
     </div>
   );
 };
->>>>>>> 6d4aab3a96b9fbf4a2e9f9f9c7cfd9f6accb34e4
 
 export default App;

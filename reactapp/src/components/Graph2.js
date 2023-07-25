@@ -11,7 +11,7 @@ const Graph2 = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/event',{
+      .get('https://8080-ddccbfcbbfcbfcaaafaebabceaeaadbdbabf.project.examly.io/event',{
         method: 'GET',
         headers:
          {
@@ -32,8 +32,8 @@ const Graph2 = () => {
     ticketsCount: event.tickets.length,
   }));
 
-  const eN = eventData.map((data) => data.eventName);
-  const tC = eventData.map((data) => data.ticketsCount);
+  const eN = eventData.map((data1) => data1.eventName);
+  const tC = eventData.map((data2) => data2.ticketsCount);
 
   const data = {
     labels: eN,

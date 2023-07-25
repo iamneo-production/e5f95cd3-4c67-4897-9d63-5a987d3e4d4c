@@ -12,7 +12,7 @@ import com.example.springapp.service.EventService;
 import java.util.List;
 
 
-@CrossOrigin
+@CrossOrigin(origins = "https://8081-ddccbfcbbfcbfcaaafaebabceaeaadbdbabf.project.examly.io")
 @RestController
 @RequestMapping("/event")
 public class EventController

@@ -10,7 +10,7 @@ import com.example.springapp.service.PaymentService;
 
 import java.util.List;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://8081-ddccbfcbbfcbfcaaafaebabceaeaadbdbabf.project.examly.io")
 @RestController
 @RequestMapping("/payment")
 public class PaymentController {

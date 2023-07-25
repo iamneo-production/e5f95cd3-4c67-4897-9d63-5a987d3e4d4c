@@ -21,7 +21,7 @@ import com.example.springapp.service.AttendeeService;
 
 
 
-@CrossOrigin
+@CrossOrigin(origins = "https:/8081-ddccbfcbbfcbfcaaafaebabceaeaadbdbabf.project.examly.io")
 @RestController
 @RequestMapping("/attendee")
 public class AttendeeController 

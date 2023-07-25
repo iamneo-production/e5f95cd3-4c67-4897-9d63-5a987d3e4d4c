@@ -1,3 +1,10 @@
-public class RoleRepository {
-    
+package com.example.springapp.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.springapp.model.Role;
+
+public interface RoleRepository extends JpaRepository<Role,String>
+{
+
 }
