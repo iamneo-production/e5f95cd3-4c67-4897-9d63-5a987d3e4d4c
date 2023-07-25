@@ -73,7 +73,7 @@ const TicketPage = () =>
     };
     const fetchAttendeeDetails = async () => {
       try {
-        const response = await fetch(`https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/attendee/attendee/${aid}`,
+        const response = await fetch(`https://8080-bacfeeecffacbfcaaafaebabceaeaadbdbabf.project.examly.io/attendee/attendee/${aid}`,
         {
           method: 'GET',
           headers:
@@ -93,7 +93,7 @@ const TicketPage = () =>
     };
     const fetchTicketDetails = async () => {
       try {
-        const response = await fetch(`https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/ticket/ticket/${tid}`,{
+        const response = await fetch(`https://8080-bacfeeecffacbfcaaafaebabceaeaadbdbabf.project.examly.io/ticket/ticket/${tid}`,{
           method: 'GET',
           headers:
            {

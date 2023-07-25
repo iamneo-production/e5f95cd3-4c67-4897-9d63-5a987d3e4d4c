@@ -187,7 +187,7 @@ function PaymentPage ()
       status: 'Booked',
     };
   
-    fetch('https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/ticket', {
+    fetch('https://8080-bacfeeecffacbfcaaafaebabceaeaadbdbabf.project.examly.io/ticket', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -211,7 +211,7 @@ function PaymentPage ()
   };
   
   const updateTicketCount = (eventid,count) => {
-    fetch(`https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/event/tickets/${eventid}`, {
+    fetch(`https://8080-bacfeeecffacbfcaaafaebabceaeaadbdbabf.project.examly.io/event/tickets/${eventid}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
