@@ -15,7 +15,7 @@ const Attendees= () => {
 
   const fetchAttendees = () => 
   {
-    axios.get('https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/attendee',
+    axios.get('https://8080-aeddcabccbfcaaafaebabceaeaadbdbabf.project.examly.io/attendee',
     {
     method: 'GET',
     headers:

@@ -11,7 +11,7 @@ const Graph2 = () => {
 
   useEffect(() => {
     axios
-      .get('https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/event',{
+      .get('https://8080-aeddcabccbfcaaafaebabceaeaadbdbabf.project.examly.io/event',{
         method: 'GET',
         headers:
          {
