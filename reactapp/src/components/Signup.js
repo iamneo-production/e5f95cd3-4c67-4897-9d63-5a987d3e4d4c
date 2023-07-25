@@ -30,7 +30,7 @@ const Signup = () => {
 
       try
       {
-        const response = await  fetch('https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/api/register',{
+        const response = await  fetch('https://8080-accecdbbeedbfacbfcaaafaebabceaeaadbdbabf.project.examly.io/api/register',{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
