@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/event';
+const baseURL = 'https://8080-cbbfabdedecbfcaaafaebabceaeaadbdbabf.project.examly.io/event';
 
 class EventService {
   getAllEvents() {

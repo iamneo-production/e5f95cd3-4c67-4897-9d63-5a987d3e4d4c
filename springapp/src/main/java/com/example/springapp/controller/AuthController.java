@@ -10,7 +10,7 @@ import com.example.springapp.model.LoginResponse;
 import com.example.springapp.model.User;
 import com.example.springapp.service.AuthService;
 
-@CrossOrigin(origins = "https://8081-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io")
+@CrossOrigin(origins = "https://8081-cbbfabdedecbfcaaafaebabceaeaadbdbabf.project.examly.io")
 @RestController
 @RequestMapping("/api")
 public class AuthController
