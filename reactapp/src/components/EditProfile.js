@@ -24,7 +24,7 @@ const EditProfile = () =>
     {
     try
     {
-    const response = await fetch(`https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/api/profile/${userid}`,
+    const response = await fetch(`https://8080-bacfeeecffacbfcaaafaebabceaeaadbdbabf.project.examly.io/api/profile/${userid}`,
     {
         method: 'GET',
         headers: {
