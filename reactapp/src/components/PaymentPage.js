@@ -114,7 +114,7 @@ function PaymentPage ()
     };
 
     console.log(payment)
-    fetch("https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/payment/save",{
+    fetch("https://8080-aeddeaafbfdbbcbfcaaafaebabceaeaadbdbabf.project.examly.io/payment/save",{
       method:"POST",
       headers:
       {
