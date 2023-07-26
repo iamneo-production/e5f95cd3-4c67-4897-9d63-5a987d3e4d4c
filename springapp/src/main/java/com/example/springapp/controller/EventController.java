@@ -86,11 +86,11 @@ public class EventController
 		boolean deleted = eventService.deleteEvent(id);
 		if(deleted)
 		{
-		return ResponseEntity.ok(deleted);
+			return ResponseEntity.ok(deleted);
 		}
 		else
 		{
-		return ResponseEntity.ok(deleted);
+			return ResponseEntity.ok(deleted);
 		}
 	}
 	
