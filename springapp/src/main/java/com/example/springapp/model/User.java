@@ -60,6 +60,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
+        //HashSet to store the user's authorities
         Set<SimpleGrantedAuthority> authorities = new HashSet<>();
         this.roles.forEach(role -> authorities.add(new SimpleGrantedAuthority(role.getRoleName())));
         return authorities;
