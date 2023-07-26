@@ -17,7 +17,7 @@ const EventDetails = () =>
         const fetchEventDetails = async () => {
           try
            {
-            const response = await fetch(`http://localhost:8080/event/${id}`,{
+            const response = await fetch(`https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/event/${id}`,{
               method: 'GET',
               headers:
                {

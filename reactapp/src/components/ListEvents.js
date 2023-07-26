@@ -8,7 +8,7 @@ import '../styles/EventListingAdding.css'
 
 const ListEvents = () => {
   const navigate=useNavigate();
-  //const role = localStorage.getItem('role');
+
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => 
   {

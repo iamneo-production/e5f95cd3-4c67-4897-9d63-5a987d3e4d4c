@@ -17,7 +17,7 @@ const SalesReport = () => {
       {
          try
          {
-            const response = await fetch(`http://localhost:8080/ticket/sales-report/eventId/${eventid}`,
+            const response = await fetch(`https://8080-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io/ticket/sales-report/eventId/${eventid}`,
             {
               method: 'GET',
               headers:
