@@ -1,9 +1,4 @@
 package com.example.springapp.model;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
@@ -99,9 +94,3 @@ public class Attendee
 	   
 	   
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65

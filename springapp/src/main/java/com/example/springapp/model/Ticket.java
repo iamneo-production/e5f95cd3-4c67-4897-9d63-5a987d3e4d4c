@@ -1,18 +1,10 @@
 package com.example.springapp.model;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 @Entity
 @Table(name="Ticket")
 public class Ticket
@@ -33,12 +25,7 @@ public class Ticket
 	@JoinColumn(name="attendee_id")
 	private Attendee attendee;
 
-<<<<<<< HEAD
-	public Ticket() 
-	{
-=======
 	public Ticket() {
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 		super();
 		
 	}
@@ -94,15 +81,8 @@ public class Ticket
 		this.attendee = attendee;
 	}
 
-<<<<<<< HEAD
-}
-
-
-
-=======
    
 
 
 
 }
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65

@@ -1,20 +1,5 @@
 package com.example.springapp.controller;
 
-<<<<<<< HEAD
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import com.example.springapp.model.Event;
-import com.example.springapp.repository.EventRepository;
-import com.example.springapp.service.EventService;
-
-import java.util.List;
-
-
-@CrossOrigin(origins = "https://8081-ceabacddbcbfcaaafaebabcddfaadfadc.project.examly.io")
-=======
 import com.example.springapp.model.Event;
 import com.example.springapp.service.EventService;
 
@@ -26,20 +11,12 @@ import java.util.List;
 
 
 @CrossOrigin(origins="http://localhost:8081")
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 @RestController
 @RequestMapping("/event")
 public class EventController
 {
 	@Autowired
 	private EventService eventService;
-<<<<<<< HEAD
-	
-	
-	@Autowired
-	private EventRepository eventRepository;
-=======
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 
 	public EventController() {
 		super();
@@ -117,34 +94,4 @@ public class EventController
 		}
 	}
 	
-<<<<<<< HEAD
-	
-	@PutMapping("/tickets/{id}")
-	public ResponseEntity<String> updateTicketCount(@RequestBody Long ticketCount,@PathVariable("id") Long id)
-	{
-		
-		Event event  = eventService.getEventById(id);
-		Long ticketcountnow =event.getTotalTicket();
-		System.out.println("event ticket count"+ticketcountnow);
-		System.out.println("event tickets to book"+ticketCount);
-		System.out.println(event.toString());
-		
-		if(ticketcountnow < ticketCount)
-		{
-			return ResponseEntity.ok("Not updated tickets");
-		}
-		else 
-		{
-			event.setTotalTicket(ticketcountnow-ticketCount);
-			eventRepository.save(event);
-		return ResponseEntity.ok("Event tickets count updated");
-		}
-		
-	}
-	
-	
-
-	
-=======
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 }

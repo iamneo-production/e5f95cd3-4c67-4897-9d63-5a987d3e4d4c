@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-package  com.example.springapp.controller;
-
-
-import java.util.List;
-
-=======
 package com.example.springapp.controller;
 
 import com.example.springapp.model.Ticket;
@@ -12,7 +5,6 @@ import com.example.springapp.service.TicketService;
 
 
 import java.util.List;
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,17 +17,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-<<<<<<< HEAD
-import com.example.springapp.model.Ticket;
-import com.example.springapp.service.TicketService;
-
-
-@CrossOrigin(origins = "https://8081-ceabacddbcbfcaaafaebabcddfaadfadc.project.examly.io")
-
-=======
 
 @CrossOrigin(origins="http://localhost:8081")
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 @RestController
 @RequestMapping("/ticket")
 public class TicketsController 
@@ -84,11 +67,7 @@ public class TicketsController
 
 
 
-<<<<<<< HEAD
-	@GetMapping("/attendee/{attendeeId}")
-=======
 	@GetMapping("/{attendeeId}")
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
     public ResponseEntity<List<Ticket>>  getTicketByAttendeeId(@PathVariable("attendeeId") Long attendeeId)
 	{
 		List<Ticket> t = ticketService.getTicketByAttendeeId(attendeeId);
@@ -98,11 +77,7 @@ public class TicketsController
 
 
 
-<<<<<<< HEAD
-	@GetMapping("/ticket/{id}")
-=======
 	@GetMapping("/{id}")
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 	public ResponseEntity<Ticket> getTicketById(@PathVariable("id") Long id)
 	{
 		Ticket t = ticketService.getTicketById(id);
@@ -133,14 +108,6 @@ public class TicketsController
 		boolean ans = ticketService.deleteTicket(ticketId);
 	 return ResponseEntity.ok(ans);
 	}
-<<<<<<< HEAD
-}
-
-
-
-
-
-=======
 	
 	
 	
@@ -148,4 +115,3 @@ public class TicketsController
 	
 	
 }
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65

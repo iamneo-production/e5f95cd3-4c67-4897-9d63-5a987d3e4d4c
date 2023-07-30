@@ -1,18 +1,5 @@
 package com.example.springapp.model;
-<<<<<<< HEAD
-
-
-
 import javax.persistence.*;
-
-import lombok.ToString;
-
-
-
-@ToString
-=======
-import javax.persistence.*;
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 @Entity
 @Table(name="TicketSales")
 public class TicketSales
@@ -20,10 +7,6 @@ public class TicketSales
 	   @Id
 	   @GeneratedValue(strategy = GenerationType.IDENTITY)
 	   private Long id;
-<<<<<<< HEAD
-	   
-=======
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 	   private String totalTicketsBooked;
 	   private String AvailableTickets;
 	   private String noOfAttendees;
@@ -82,12 +65,4 @@ public class TicketSales
 		
 		
 	
-<<<<<<< HEAD
 }
-
-
-
-
-=======
-}
->>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65

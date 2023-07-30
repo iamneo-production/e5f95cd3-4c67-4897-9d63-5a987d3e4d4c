@@ -2,8 +2,8 @@
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/SpringappApplication.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Attendee.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/TicketsRepository.java
-/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/AttendeeService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/TicketService.java
+/home/coder/project/workspace/springapp/src/main/java/com/example/springapp/service/AttendeeService.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/repository/TicketSalesRepository.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/controller/TicketsController.java
 /home/coder/project/workspace/springapp/src/main/java/com/example/springapp/model/Event.java
