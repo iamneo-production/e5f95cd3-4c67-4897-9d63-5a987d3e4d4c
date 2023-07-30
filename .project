@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>iamneo-production_e5f95cd3-4c67-4897-9d63-5a987d3e4d4c</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+	</natures>
+	<filteredResources>
+		<filter>
+<<<<<<< HEAD
+			<id>1687152114602</id>
+=======
+<<<<<<< HEAD
+			<id>1690037473377</id>
+=======
+<<<<<<< HEAD
+			<id>1690035324017</id>
+=======
+<<<<<<< HEAD
+			<id>1690032283783</id>
+=======
+<<<<<<< HEAD
+			<id>1690032283783</id>
+=======
+<<<<<<< HEAD
+			<id>1688214577480</id>
+=======
+<<<<<<< HEAD
+			<id>1683963995249</id>
+=======
+<<<<<<< HEAD
+			<id>1683277440957</id>
+=======
+<<<<<<< HEAD
+			<id>1683277440957</id>
+=======
+<<<<<<< HEAD
+			<id>1685550170289</id>
+=======
+<<<<<<< HEAD
+			<id>1685550170289</id>
+=======
+			<id>1687239169035</id>
+>>>>>>> 897245415b92f0d298f413b9a59243d371925c9c
+>>>>>>> c05a012bac5ca7b5cc0cb55f5252f03c7fe1905a
+>>>>>>> 80690be8411cb550d5eb3ba187ec438a3cec3aaa
+<<<<<<< HEAD
+>>>>>>> 9497ea0832948d3c09faa263c17af2b384f63352
+=======
+>>>>>>> d92f735bfb171596ddadb453cdb142988154b842
+>>>>>>> 130441f646fd53bc9d2154c3b58a4484c684ef67
+>>>>>>> 2c2150e10f1a22ff088b2cd2cf92c88a338166ab
+>>>>>>> 10626d693a77e1d357ef656fc17ef3396267b622
+>>>>>>> 5c252c394334d8fee2bcbc6b9b50289f37599b74
+>>>>>>> e58959362f1967f14a8ce9302710f7da9dac7f52
+>>>>>>> bba11639a8bbe2048fc3c31d5a032c9a1c84a0e1
+>>>>>>> 1e015083a8ae644f087abfbf611508eb7c0f4f1d
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+</projectDescription>
