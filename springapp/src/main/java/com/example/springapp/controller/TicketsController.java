@@ -1,4 +1,4 @@
-public package com.example.springapp.controller;
+package com.example.springapp.controller;
 
 import com.example.springapp.model.Ticket;
 import com.example.springapp.service.TicketService;
@@ -108,6 +108,4 @@ public class TicketsController
 		boolean ans = ticketService.deleteTicket(ticketId);
 	 return ResponseEntity.ok(ans);
 	}
-} TicketsController {
-    
 }

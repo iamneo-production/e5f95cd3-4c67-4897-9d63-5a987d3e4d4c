@@ -94,4 +94,8 @@ public class AttendeeController
         boolean removed = attendeeService.removeAttendeeById(attendeeId);
        return ResponseEntity.ok(removed);
     }
+	
+	
+	
+
 }
