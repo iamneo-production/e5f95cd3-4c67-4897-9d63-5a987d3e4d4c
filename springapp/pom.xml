@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>2.7.14</version>
 		<relativePath/> <!-- lookup parent from repository -->
+=======
+		<version>2.7.10</version>
+		<relativePath /> <!-- lookup parent from repository -->
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>springapp</artifactId>
@@ -17,15 +27,24 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 		<dependency>
+<<<<<<< HEAD
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+=======
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.17.0</version>
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 		</dependency>
 
 		<dependency>
@@ -35,11 +54,17 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
 
+=======
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
@@ -47,16 +72,20 @@
 		</dependency>
 
 		<dependency>
+<<<<<<< HEAD
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
 
 		<dependency>
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
 <dependency>
     <groupId>org.junit.platform</groupId>
@@ -94,6 +123,47 @@
 		</dependency>
 
 
+=======
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<scope>provided</scope>
+		</dependency>
+
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 	</dependencies>
 
 	<build>
@@ -101,6 +171,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+<<<<<<< HEAD
 				<configuration>
 					<excludes>
 						<exclude>
@@ -109,6 +180,8 @@
 						</exclude>
 					</excludes>
 				</configuration>
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 			</plugin>
 		</plugins>
 	</build>

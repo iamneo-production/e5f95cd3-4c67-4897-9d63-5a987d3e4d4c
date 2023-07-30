@@ -10,6 +10,10 @@ import com.example.springapp.model.Event;
 import com.example.springapp.repository.EventRepository;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 @Service
 public class EventService 
 {
@@ -85,4 +89,8 @@ public class EventService
 	
 	
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65

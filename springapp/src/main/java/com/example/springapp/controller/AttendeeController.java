@@ -1,7 +1,16 @@
 package com.example.springapp.controller;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+import com.example.springapp.model.Attendee;
+import com.example.springapp.service.AttendeeService;
+
+
+
+import java.util.List;
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,14 +23,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+<<<<<<< HEAD
 import com.example.springapp.model.Attendee;
 import com.example.springapp.service.AttendeeService;
 
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 
 
 
 
-@CrossOrigin(origins = "https://8081-ceabacddbcbfcaaafaebabceaeaadbdbabf.project.examly.io")
+<<<<<<< HEAD
+@CrossOrigin(origins = "https://8081-ceabacddbcbfcaaafaebabcddfaadfadc.project.examly.io")
+=======
+@CrossOrigin(origins="http://localhost:8081")
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 @RestController
 @RequestMapping("/attendee")
 public class AttendeeController 
@@ -50,6 +66,10 @@ public class AttendeeController
 	@PostMapping
 	 public ResponseEntity<Attendee> registerAttendee(@RequestBody Attendee attendee)
 	{
+<<<<<<< HEAD
+=======
+		
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
         Attendee registeredAttendee = attendeeService.registerAttendee(attendee);
         return ResponseEntity.ok(registeredAttendee);
     }
@@ -61,6 +81,7 @@ public class AttendeeController
       return ResponseEntity.ok(attendees);
     }
 	
+<<<<<<< HEAD
 	
 	@GetMapping("/attendee/{id}")
     public ResponseEntity<Attendee> getAttendee(@PathVariable("id") long id)
@@ -73,6 +94,8 @@ public class AttendeeController
 	
 	
 	
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 	@GetMapping("/{id}")
     public ResponseEntity<List<Attendee>> getAttendeeByEventId(@PathVariable("id") long id) 
 	{
@@ -104,7 +127,15 @@ public class AttendeeController
         boolean removed = attendeeService.removeAttendeeById(attendeeId);
        return ResponseEntity.ok(removed);
     }
+<<<<<<< HEAD
 }
 
 
 
+=======
+	
+	
+	
+
+}
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65

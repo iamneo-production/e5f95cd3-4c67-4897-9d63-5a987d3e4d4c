@@ -3,6 +3,7 @@ package com.example.springapp.model;
 import java.util.Date;
 import java.util.List;
 
+<<<<<<< HEAD
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,6 +22,14 @@ import lombok.ToString;
 
 
 @ToString
+=======
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+
+
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 @Entity
 @Table(name = "events")
 public class Event
@@ -70,8 +79,13 @@ public class Event
    
 
 
+<<<<<<< HEAD
 	public Event(Long id, String name, String description, Date startDate, Date endDate, String location,Long totalTicket)
 	{
+=======
+	public Event(Long id, String name, String description, Date startDate, Date endDate, String location,
+			Long totalTicket) {
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 		this.id = id;
 		this.name = name;
 		this.description = description;
@@ -181,4 +195,12 @@ public class Event
 	{
 		this.tickets = tickets;
 	}
+<<<<<<< HEAD
+=======
+	
+    
+
+
+	
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 }

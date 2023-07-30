@@ -1,4 +1,8 @@
 package com.example.springapp.service;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 import java.util.List;
 import java.util.Optional;
 
@@ -94,5 +98,8 @@ public class TicketService
 	
 
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65

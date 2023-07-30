@@ -11,7 +11,10 @@ import com.example.springapp.model.Event;
 import com.example.springapp.repository.AttendeeRepository;
 import com.example.springapp.repository.EventRepository;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 @Service
 public class AttendeeService {
 	@Autowired
@@ -43,8 +46,11 @@ public class AttendeeService {
 	public void setEventRepository(EventRepository eventRepository) {
 		this.eventRepository = eventRepository;
 	}
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 
 	public Attendee registerAttendee(Attendee attendee)
 	 {
@@ -54,7 +60,10 @@ public class AttendeeService {
 		attendee.setEvent(event);
 		return attendeeRepository.save(attendee);
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 
 	public List<Attendee> getAttendeeByEventId(Long id)
 	{
@@ -72,6 +81,7 @@ public class AttendeeService {
 	public List<Attendee> getAllAttendee() {
 		return attendeeRepository.findAll();
 	}
+<<<<<<< HEAD
 	
 	
 	
@@ -80,6 +90,8 @@ public class AttendeeService {
 		Optional<Attendee> at = attendeeRepository.findById(id);
 		return at.get();
 	}
+=======
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
 
 	public Attendee updateAttendeee(Long attendeeId,Attendee attendee)
 	{
@@ -109,6 +121,11 @@ public class AttendeeService {
 		}
 		return false;
 	}
+<<<<<<< HEAD
 }
 
 
+=======
+
+}
+>>>>>>> cd20a07a8d17164e81677b15f295cacebc216f65
