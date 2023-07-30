@@ -6,13 +6,17 @@ import { useNavigate } from 'react-router-dom';
 const EventDetails = () => 
 {
   const navigate=useNavigate();
+  // Define a state variable to store the event data fetched from the API
     const[data,setEventData]=useState([]);
+    // Retrieve the token from the localStorage (assuming it was previously set during authentication)
     const token =localStorage.getItem('token');
 
     //const {id}=useParams();
+     // Retrieve the event ID from the localStorage (it was previously set when viewing events event listing page)
     const id = Number(localStorage.getItem('eventId'));
     console.log(id);
 
+    // useEffect hook to fetch the event details when the component mounts or when the event ID or token changes
     useEffect(() => {
         const fetchEventDetails = async () => {
           try

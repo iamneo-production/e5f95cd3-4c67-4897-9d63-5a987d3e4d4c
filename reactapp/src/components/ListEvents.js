@@ -8,21 +8,25 @@ import '../styles/EventListingAdding.css'
 
 const ListEvents = () => {
   const navigate=useNavigate();
+  // Define a state variable to check if the user is an ADMIN
 
   const [isAdmin, setIsAdmin] = useState(false);
+   // Retrieve the user role from the localStorage during component initialization
   useEffect(() => 
   {
     const storedRole = localStorage.getItem('role');
     setIsAdmin(storedRole === 'ADMIN');
   }, []);
 
-
+// Define state variables to store events 
     const [events, setevents] = useState([])
+    // Fetch all events from the backend API during component initialization
     useEffect(() => {
 
       getAllEvent();
   }, [])
 
+  // Function to fetch all events from the backend API
   const getAllEvent = () => {
       eventService.getAllEvents().then((response) => {
           setevents(response.data)
@@ -31,6 +35,7 @@ const ListEvents = () => {
           console.log(error);
       })
   }
+  // Function to delete an event by its ID
   const deleteEvent = (eventId) => {
     eventService.deleteEvent(eventId).then((response) =>{
      getAllEvent();
@@ -39,12 +44,15 @@ const ListEvents = () => {
         console.log(error);
     })
 }
+// Define state variables for searchquery
     const [searchQuery, setSearchQuery] = useState('');
   
+    // Handle search input changes and update the searchQuery state
     const handleSearch = (event) => {
       setSearchQuery(event.target.value);
     }
     
+    // Filter the events based on the search query
     const filteredEvents = events.filter(event => {
       const eventName = event.name.toLowerCase();
       const eventDate = event.startDate.toLowerCase();
@@ -54,6 +62,8 @@ const ListEvents = () => {
       return eventName.includes(query) || eventDate.includes(query) || eventLocation.includes(query);
     });
  
+
+    // Render the list of events in a card format with search functionality
 return(
 
 <> 
